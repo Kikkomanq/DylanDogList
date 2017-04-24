@@ -27,15 +27,12 @@ namespace Automation
         public void searchForDylanDog()
         {
 
-
             driver.FindElement(By.Id("txtPretraga")).SendKeys("dylan dog");
             driver.FindElement(By.Id("search_button")).Click();
-
         }
 
         public void sortByPrice()
         {
-
 
             //Wait for elements to load
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(2));
@@ -51,7 +48,6 @@ namespace Automation
 
             //wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id='container_right']/div[1]/div/select/option[3]")));
             //driver.FindElement(By.XPath("//*[@id='container_right']/div[1]/div/select/option[3]")).Click();
-
 
         }
 
@@ -126,8 +122,6 @@ namespace Automation
         }
 
 
-
-
         public static void Main()
         {
 
@@ -136,9 +130,7 @@ namespace Automation
             test.goToPage();
             test.searchForDylanDog();
             test.sortByPrice();
-
             int[] prices = test.getPrices();
-
             bool isSorted = test.IsSorted(prices);
 
             if (isSorted == true)
