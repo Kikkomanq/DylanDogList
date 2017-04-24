@@ -64,8 +64,7 @@ namespace Automation
 
             int[] intPrices = new int[prices.Count];
 
-
-
+            
             for (int i = 0; i < prices.Count; i++)
 
             {
@@ -91,6 +90,7 @@ namespace Automation
 
         }
 
+        //Gets all the elements extract only text
         static string getDiscountPrices(IWebElement parent)
         {
             string text = parent.Text;
@@ -103,6 +103,7 @@ namespace Automation
             return text.Trim();
         }
 
+        //Checks if list is sorted
         public bool IsSorted(int[] prices)
         {
 
